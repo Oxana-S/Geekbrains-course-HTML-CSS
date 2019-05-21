@@ -186,6 +186,9 @@ button
     color: #212121;
     border-bottom: 2px solid #000;
 }
+.active-home {
+	color: #000!important;
+}
 
 /* ПОИСК ПО САЙТУ  ***Вариант-1***
 Просто класс с  размещением в bg картинки png*/
@@ -227,9 +230,15 @@ button
 
 /* ПОИСК ПО САЙТУ ***Вариант-3***
 C тегом <form> и скриптом*/
-.my-block-search
+#header .my-block-search
 {
-    margin-top: 44px;
+    /*margin-top: 44px;*/
+	padding-top: 59px;
+}
+#header-product .my-block-search
+{
+    
+	
 }
 .my-block-search__btn
 {
@@ -797,9 +806,8 @@ C тегом <form> и скриптом*/
 #footer,
 #my-footer
 {
-
-
     background-color: #f7f7f7;
+	
 }
 
 #footer h5
@@ -959,6 +967,10 @@ C тегом <form> и скриптом*/
     justify-content: space-between;
 
     margin-top: 27px;
+	
+}
+.copy-right {
+	font-size: small;
 }
 .agreement a
 {
@@ -1136,8 +1148,7 @@ C тегом <form> и скриптом*/
     letter-spacing: 1.8px;
 }
 .price-price {
-    margin-top: 12
-    px;
+    margin-top: 12px;
 }
 
 .my-card-product--price .currency {

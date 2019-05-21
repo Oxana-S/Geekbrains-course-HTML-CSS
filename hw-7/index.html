@@ -26,7 +26,7 @@
             <div class="menu">
                 <!-- БЛОК МЕНЮ САЙТА -->
                 <ul>
-                    <li><a href="#" class= "nav-link active">HOME</a></li>
+                    <li><a href="#" class= "nav-link active-home">HOME</a></li>
                     <li><a href="product.html">PRODUCTS</a></li>
                     <li><a href="#">HISTORY</a></li>
                     <li><a href="deals.html">SHOWROOM</a></li>
@@ -44,7 +44,7 @@
             <!--                       placeholder="&#xf002;"/>-->
             <!--            </form>-->
             <!-- ****** Вариант-3: отображение дива с полем input и скриптом ****-->
-            <<div class="my-block-search">
+            <div class="my-block-search">
                 <button class="my-block-search__btn"><i class="fas fa-search fa-2x"></i></button>
                 <div class="my-block-search__input">
                     <input placeholder="Введите свой запрос..." type="text">
@@ -257,14 +257,16 @@
                     <p>Suscribe to know about our latest news,
                         products and special offers just for
                         suscribers.</p>
-                    <form action="">
+                    <form action="#">
                         <!-- ** РЕШЕНИЕ КАК ВСТАВИТЬ ИКОНКУ ИЗ AWESOME В ПОЛЕ <input> **
                         Обернул в обертку и этой обертке дал позишен релатив, а
                         уже внутри иконке позишен абсолют и дальше двигал -->
                         <div class="input-wrap">
-                            <button type="submit" style="display: inline-block">
-                                <a href="#"><i class="far fa-paper-plane"></i></a>
-                            </button>
+                            <a href="contacs.html">
+								<button type="submit" style="display: inline-block">
+									<i class="far fa-paper-plane"></i>
+								</button>
+							</a>
                             <input type="email" placeholder="your email address">
                         </div>
 
@@ -305,6 +307,6 @@
     });
 </script>
 <!-- Подключения скрипта для вёрстки в pixel-perfect -->
-<script src="js/pixelScreen-home.js"></script>
+<!--<script src="js/pixelScreen-home.js"></script>
 </body>
 </html>
