@@ -1,0 +1,1247 @@
+/* ПОДКЛЮЧЕНИЕ ШРИФТОВ */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,600,700&subset=cyrillic,cyrillic-ext');
+@import url('fonts/GothamPro/gotham.css');
+/* Очистка отступов делал в первой врстке к дз-6 */
+/***/
+/*{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+/*
+*
+*
+*
+*/
+/* прибиваю футер к низу*/
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+}
+.contacts-page {
+    /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 1 0 auto;
+}
+footer{
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+}
+
+/* End hide from IE-mac */
+/*
+*
+*
+*
+*
+/* Стиль преобразования блочных в строчно блочные */
+.inline-block
+{
+    display: inline-block; /* пробовал выравнивать меню через эти стили*/
+}
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a
+{
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+p,
+h5
+{
+    color: #6c6c6c;
+}
+
+h5
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+/**
+* Сброс стилей по умолчанию с тега <button>.
+*/
+button
+{
+    font: inherit;
+
+    padding: 0;
+
+    cursor: pointer;
+    text-transform: uppercase;
+
+    color: inherit;
+    border: none;
+    /* отображаем курсор в виде руки при наведении; некоторые
+      считают, что необходимо оставлять стрелочный вид для кнопок */
+    background-color: transparent;
+}
+.clr
+{
+    clear: both;
+}
+/*******************************************/
+/*******************************************/
+/* НАЧАЛО СТИЛЕЙ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ САЙТА**
+*
+* ОБЕРТКА ДЛЯ ВСЕГО САЙТА */
+.my-wrapper
+{
+    width: 1366px;
+    margin: 0 auto;
+
+}
+.my-wrapper-index {
+    padding-left: 0;
+}
+/*******************************************************
+*
+*
+* БЛОК: ШАПКА САЙТА С ГЛАВНЫМ МЕНЮ САЙТА -- <header>
+*/
+#header
+{
+    height: 800px;
+
+    background-image: url(img/slider-img.jpg);
+}
+
+/* ПАНЕЛЬ С ЛОГОТИПОМ, НАВИГАЦИЕЙ и ПОИСКОМ */
+.header-my-nav-bar
+{
+    height: 90px;
+}
+
+/* ЛОГОТИП */
+.logo
+{
+    float: left;
+
+    width: 185px;
+    height: 22px;
+    margin-top: 63px;
+    margin-right: 311px;
+    margin-left: 98px;
+
+    background-image: url(img/logo.png);
+}
+
+/* МЕНЮ */
+.menu
+{
+    float: left;
+}
+.menu ul
+{
+    list-style-type: none;
+
+    text-transform: uppercase;
+}
+
+.menu ul li
+{
+    float: left;
+
+    margin-top: 47px;
+    margin-right: 14px;
+    margin-left: 10px;
+}
+
+.menu a
+{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 48px;
+
+    display: block;
+
+    height: 43px;
+
+    text-transform: uppercase;
+
+    color: #8c8c8c;
+}
+
+.menu a:hover
+{
+    color: #212121;
+    border-bottom: 2px solid #000;
+}
+
+/* ПОИСК ПО САЙТУ  ***Вариант-1***
+Просто класс с  размещением в bg картинки png*/
+/*.search {*/
+/*    width: 23px;*/
+/*    height: 23px;*/
+/*    background-image: url(img/search.png);*/
+/*    float: left;*/
+/*    margin-top: 63px;*/
+/*    margin-left: 11px;*/
+/*}*/
+
+/* ПОИСК ПО САЙТУ ***Вариант-2***
+такой себе корявенький, но уже с тегом <form> */
+.form-my-control
+{
+    /*float: left;*/
+    /*width: 100px;*/
+    width: 100px!important;
+    height: 33px;
+    margin-top: 63px!important;
+    margin-left: 11px;
+
+    cursor: pointer;
+
+    all: unset;
+}
+
+.my-form-search input:focus
+{
+    padding-bottom: 8px;
+
+    border-bottom: 2px solid #000;
+}
+.my-form-search input:hover
+{
+    cursor: help;
+}
+
+/* ПОИСК ПО САЙТУ ***Вариант-3***
+C тегом <form> и скриптом*/
+.my-block-search
+{
+    margin-top: 44px;
+}
+.my-block-search__btn
+{
+    /* color: #fff; */
+    display: inline-block;
+
+    height: 28px;
+    margin-left: 10px;
+
+    cursor: pointer;
+    vertical-align: middle;
+
+    border: none;
+    background: none;
+}
+
+.my-block-search__input
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 0;
+    height: 28px;
+
+    -webkit-transition: all .3s ease;
+         -o-transition: all .3s ease;
+            transition: all .3s ease;
+    vertical-align: middle;
+
+    opacity: 0;
+}
+
+.my-block-search__input.__opened
+{
+    width: 50px;
+    padding: 0 5px;
+
+    opacity: 1;
+}
+
+.my-block-search__input input
+{
+    position: absolute;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+/* БЛОК НАДПИСИ НА СЛАЙДЕРЕ */
+#header .slider-content
+{
+    margin-top: 268px;
+    margin-left: 98px;
+}
+
+.slider-content_tag
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 48px;
+    /*width: 109px;*/
+
+    height: 13px;
+    margin-bottom: 22px;
+
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    color: #43a047;
+}
+
+.slider-content_name
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 200;
+    line-height: 72px;
+
+    width: 439px;
+    margin-bottom: 17px;
+
+    text-transform: uppercase;
+
+    color: #212121;
+}
+
+.slider-content_details
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    width: 458px;
+    margin-bottom: 28px;
+    /*height: 38px;*/
+
+    color: #6c6c6c;
+}
+
+.main_btn
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 45px;
+
+    position: relative;
+
+    display: block;
+
+    width: 212px;
+    height: 45px;
+
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+
+    color: #212121!important;
+    border-radius: 23px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 5px 1px rgba(33, 33, 33, .35);
+            box-shadow: 0 2px 5px 1px rgba(33, 33, 33, .35);
+}
+.main_btn:hover
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+    border: .5px solid #000;
+    /*box-shadow: none;*/
+}
+.main_btn:active
+{
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.main_btn:hover::after
+{
+    position: absolute;
+    right: 20px;
+
+    content: url(img/arrow-btn.png);
+}
+
+#header .slider-navigation-items
+{
+    margin-top: 139px;
+}
+
+.slider-navigation-items
+{
+    width: 120px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.navigation__item
+{
+    display: inline-block;
+
+    width: 30px;
+    height: 30px;
+
+    vertical-align: super;
+
+    border-radius: 50%;
+    background-color: #c7c7c7;
+}
+.navigation__item:hover
+{
+    background-color: #9c9c9c;
+}
+.navigation__item-active
+{
+    display: inline-block;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: #212121;
+}
+
+/**************************************
+*
+*
+* БЛОК: FEATURED
+*/
+.featured
+{
+    width: 1171px;
+    height: 369px;
+    margin: 0 auto;
+}
+/* Локальное меню для продуктов */
+.tab-control
+{
+    margin-top: 113px;
+    margin-bottom: 60px;
+}
+
+.tab-name
+{
+    font-size: 36px;
+    font-weight: 700;
+
+    color: #212121;
+    border-bottom: 2px solid #000;
+}
+
+.tab-name_active
+{
+    font-size: 36px;
+    font-weight: 700;
+
+    margin-right: 703px;
+    margin-left: 24px;
+
+    color: #6c6c6c;
+    border-bottom: 1px solid #dadada;
+}
+
+.tab-choice-btn
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    letter-spacing: 3.6px;
+
+    color: #212121;
+}
+
+.tab-choice-btn::after
+{
+    content: url(img/arrow-btn.png);
+}
+.tab-choice-btn:hover
+{
+    color: #6c6c6c;
+}
+.tab-content
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.content-product
+{
+    position: relative;
+}
+/* Стили для Скрытого Блок над карточкой товара, появляющийся
+при наведении мыши */
+.content-product .after
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    color: #fff;
+}
+
+.content-product:hover .after
+{
+    display: block;
+
+    width: 270px;
+    height: 270px;
+
+    opacity: .8;
+    border: 1px solid #9c9c9c;
+    background-color: #fff;
+}
+
+.after figure
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    margin-top: 62px;
+}
+
+.shape
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    margin-bottom: 19px;
+
+    border-radius: 24px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 5px 1px rgba(33, 33, 33, .35);
+            box-shadow: 0 2px 5px 1px rgba(33, 33, 33, .35);
+}
+.shape:hover
+{
+    cursor: pointer;
+
+    background-color: #d6d6d6;
+}
+.after figure span
+{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 29.88px;
+
+    display: block;
+
+    margin-bottom: 23px;
+
+    color: #212121;
+}
+
+.after figure p
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21.91px;
+
+    width: 206px;
+    height: 33px;
+
+    text-align: center;
+
+    color: #6c6c6c;
+}
+
+/**********************
+*
+* БЛОК PROMO-PRODUCT */
+.promo-product
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    margin-top: 126px;
+}
+
+.promo-content
+{
+    position: relative;
+
+    width: 683px;
+    height: 683px;
+}
+
+.promo-info-block
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin-top: 212px;
+    margin-left: 50px;
+}
+
+.promo-tag
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 48px;
+
+    margin-bottom: -7px;
+
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    color: #1e88e5!important;
+}
+
+.promo-name
+{
+    font-size: 36px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    color: #212121;
+}
+
+.promo-details
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24.04px;
+
+    width: 374px;
+    margin-bottom: 28px;
+
+    color: #6c6c6c;
+}
+
+/*************************
+*
+* БЛОК TRENDING-PRODUCTS */
+.trending-products
+{
+    width: 1171px;
+    height: 869px;
+    margin: 0 auto;
+}
+
+.tab-name__trending
+{
+    margin-right: 624px;
+}
+
+.products-images
+{
+    /*height: 770px;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    width: 1170px;
+}
+
+.products-images img
+{
+    margin-bottom: 30px;
+}
+
+/*************************
+*
+* БЛОК HOT-DEALS */
+
+.hot-deals
+{
+    height: 800px;
+    margin-top: 126px;
+
+    background-image: url('img/slider-img-2.png');
+}
+
+/* БЛОК НАДПИСИ НА СЛАЙДЕРЕ */
+/* Стили применились с слайдера в header */
+.hot-deals .slider-content
+{
+    padding-top: 272px;
+    padding-left: 98px;
+}
+
+.hot-deals .slider-content_tag
+{
+    color: #e53935;
+}
+
+.hot-deals .slider-navigation-items
+{
+    margin-top: 225px;
+}
+
+/*************************
+*
+* БЛОК EXCLUSIVE-PRODUCT */
+.exclusive-product
+{
+    width: 1171px;
+    height: 570px;
+    margin-top: 120px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.exclusive-block__left
+{
+    position: relative;
+
+    float: left;
+}
+
+.exclusive-block__left .promo-info-block
+{
+    margin-top: 171px;
+    margin-left: 31px;
+}
+
+.exclusive-block__right img
+{
+    margin-bottom: 24px;
+    margin-left: 28px;
+}
+
+
+.mobile-app
+{
+    /*width: 1366px;*/
+    height: 516px;
+    margin-top: 120px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    background-image: url('img/back-img.png');
+}
+
+/* БЛОК НАДПИСИ НА СЛАЙДЕРЕ */
+/* Стили применились с слайдера в header */
+.mobile-app .slider-content
+{
+    padding-top: 109px;
+    padding-left: 98px;
+}
+
+.mobile-app .slider-content_tag
+{
+    color: #6c6c6c;
+}
+
+.mobile-app .slider-content_details
+{
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 24px;
+
+    color: #6c6c6c;
+}
+
+/*************************
+*
+* БЛОК FOOTER */
+#footer,
+#my-footer
+{
+
+
+    background-color: #f7f7f7;
+}
+
+#footer h5
+{
+    margin-bottom: 17px;
+}
+
+.sub_wrap
+{
+    width: 1171px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+#footer .sub-wrap_top
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    padding-top: 117px;
+}
+
+#footer .contact
+{
+    width: 221px;
+}
+
+#fo
+{
+    margin-bottom: 30px;
+}
+#footer .contact  p,
+#my-footer .contact  p
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+
+    color: #212121;
+}
+
+#footer .useful-info
+{
+    width: 422px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+#footer .useful-info p
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    text-align: left;
+}
+
+#footer .useful_link a,
+#my-footer .useful_link a
+{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+
+    display: block;
+
+    margin-bottom: 16px;
+
+    letter-spacing: .7px;
+    text-transform: uppercase;
+
+    color: #212121;
+}
+
+#footer .useful_link:first-child
+{
+    margin-right: 103px;
+}
+
+#footer .form,
+#my-footer .form
+{
+    width: 372px;
+}
+
+#footer .form p,
+#my-footer .form p
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+
+    width: 370px;
+    margin-bottom: 26px;
+
+    color: #212121;
+}
+
+#footer input,
+#my-footer input
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    /*width: 370px;*/
+    width: 372px;
+    height: 48px;
+    padding-left: 19px;
+
+    color: #6c6c6c;
+    border: 1px solid #d9dee1;
+    background-color: #fff;
+}
+
+/* РЕШЕНИЕ КАК ВСТАВИТЬ ИКОНКУ ИЗ AWESOME В ПОЛЕ <input> */
+.input-wrap
+{
+    position: relative;
+}
+
+.input-wrap button
+{
+    position: absolute;
+    z-index: 1;
+    top: 28%;
+    right: 5%;
+}
+#my-footer .input-wrap button
+{
+    right: -89px;
+}
+.fa-paper-plane
+{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22px;
+
+    color: #6c6c6c;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+.sub-wrap_bottom
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    margin-top: 27px;
+}
+.agreement a
+{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 26px;
+
+    letter-spacing: .6px;
+    text-transform: uppercase;
+
+    color: #6c6c6c;
+}
+/* ****************
+*******************
+  СТРАНИЦА CONTACTS
+*
+* <header>
+* МОДУЛЬ-5:__КАРТОЧКИ С КОНТАКТАМИ *
+**
+** Карточки с контактами */
+
+.my-contacts-header{
+    padding-top: 53px!important;
+}
+.contacts-page
+{
+    width: 1170px;
+    margin-top: 71px;
+    margin-bottom: 122px;
+}
+.contacts-page__items
+{
+    height: 370px;
+}
+.contacts-page__item
+{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background: #cecece;
+}
+.contacts-page__content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .8;
+    background: #fff;
+}
+.contacts-page__item:hover .contacts-page__content
+{
+    z-index: 10;
+    bottom: 30px;
+
+    display: none;
+
+    cursor: pointer;
+
+    background: red;
+}
+.contacts-page__content img
+{
+    width: 38px;
+    height: 48px;
+    margin-top: 48px;
+}
+.contacts-page__content h5
+{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 29px;
+
+    text-transform: uppercase;
+
+    color: #212121;
+}
+.contacts-page__content p
+{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    /* Style for "Phone: 190" */
+
+    height: 138px;
+
+    color: #6c6c6c;
+}
+.contacts-page__content span
+{
+    font-weight: 500;
+}
+/* ****************
+*******************
+  СТРАНИЦА DEALS
+*
+* <header>
+* МОДУЛЬ-6:__ПОДРОБНОЕ ОПИСАНИЕ ПРОДУКТА *
+**
+** Изменённая шапка из МОДУЛЯ-1 */
+.products-details {
+    max-width: 1366px;
+    margin-top: 29px;
+}
+#header-deals {
+    background: #fff;
+
+}
+#header-deals .my-header-nav {
+    margin-top: 53px;
+}
+/* Навигационне меню по продуктам */
+.s-price {
+    height: 70px;
+
+}
+
+.products-details ul {
+    padding-bottom: 17px;
+    padding-top: 17px;
+}
+
+.products-details li {
+    margin-right: 30px;
+}
+
+.products-details a {
+    padding-right: 0;
+    padding-left: 0;
+    color: #6c6c6c;
+
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    letter-spacing: 1.8px;
+}
+/* Слайдер просмотра вида товара */
+.my-card-product {
+    margin-top: 42px;
+}
+.img-big-wrap img {
+    width: 100%;
+    margin-top: 58px;
+}
+
+.img-small-wrap img {
+    height: 100%;
+
+}
+/* Заголовок, Цена, Описание Товара */
+
+.my-card-product--price .title {
+    color: #212121;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 93px;
+}
+
+.my-card-product--price .price-tag {
+    margin-top: -12px;
+    color: #e53935;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+}
+.price-price {
+    margin-top: 12
+    px;
+}
+
+.my-card-product--price .currency {
+
+    font-size: 36px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    text-transform: uppercase;
+    color: #212121;
+}
+.my-card-product--price .num {
+    font-size: 72px;
+    color: #212121;
+    font-family: 'Gotham Pro';
+    font-weight: 300;
+    line-height: 48px;
+    font-style: normal;
+}
+.my-card-product--price span {
+    font-size: 36px;
+    font-weight: bold;
+
+}
+.my-card-product--price p {
+    color: #212121;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24.01px;
+    letter-spacing: 0.4px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/* Кнопка Купить */
+.buy_btn
+{
+    margin-top: 31px;
+    color: #ffffff!important;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 75px;
+    text-transform: uppercase;
+
+    letter-spacing: 4.4px;
+
+    width: 510px;
+    height: 71px;
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35);
+    border-radius: 35px;
+    background-color: #f44336;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+
+
+    -webkit-box-shadow: 0 2px 5px 1px rgba(33, 33, 33, .35);
+
+}
+.buy_btn:hover
+{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    border: .5px solid #000;
+    /*box-shadow: none;*/
+}
+.buy_btn:active
+{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.buy_btn:hover::after
+{
+    position: absolute;
+    right: 70px;
+    top: 5px;
+
+    content: url(img/arrow_white.png);
+}
+
+.price-text-body {
+    margin-top: 49px;
+}
+/* Контроль переключения вкладок Промо-товара */
+.my-promo {
+    margin-top: 133px;
+}
+
+юmy-tab-control {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.tab-choice-btn{
+    padding-top: 10px;
+}
+.my-tab-control .tab-name
+{
+
+
+
+
+    border-bottom: none;
+}

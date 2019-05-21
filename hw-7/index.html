@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home GB-6</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+<!--Мои файлы с CSS стилями -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+<!-- ВЁРСТКА К УРОКУ-6. МОДУЛИ ОТЛИЧАЮТСЯ
+     ОТ ВЁРСТКИ МОДУЛЕЙ К УРОКУ-7.
+     К УРОКУ-7 ВЕРСТАЛ НА BOOTSTRAP 4 -->
+<div class="my-wrapper my-wrapper-index">
+    <header id="header">
+        <nav class="header-my-nav-bar">
+            <a href="#" class="logo"></a>
+            <div class="menu">
+                <!-- БЛОК МЕНЮ САЙТА -->
+                <ul>
+                    <li><a href="#" class= "nav-link active">HOME</a></li>
+                    <li><a href="product.html">PRODUCTS</a></li>
+                    <li><a href="#">HISTORY</a></li>
+                    <li><a href="deals.html">SHOWROOM</a></li>
+                    <li><a href="contacs.html">CONTACT</a></li>
+                    <li class="clr"></li>
+                </ul>
+            </div>
+            <!-- БЛОК ПОИСКА В МЕНЮ -->
+            <!-- ****** Вариант-1: просто отображение картинки с"Лупой" ********** -->
+            <!-- <div class="search "></div>-->
+            <!-- ****** Вариант-2: отображение с формой поиска на сайте **********-->
+            <!--            <form class="my-form-search" action="#" target="_blank">-->
+            <!--                <input id="#" class="form-my-control" type="search"-->
+            <!--                       style="font-family: 'Montserrat', 'Font Awesome 5 Free'; font-weight: 600; color: #777; font-size: 20px;"-->
+            <!--                       placeholder="&#xf002;"/>-->
+            <!--            </form>-->
+            <!-- ****** Вариант-3: отображение дива с полем input и скриптом ****-->
+            <<div class="my-block-search">
+                <button class="my-block-search__btn"><i class="fas fa-search fa-2x"></i></button>
+                <div class="my-block-search__input">
+                    <input placeholder="Введите свой запрос..." type="text">
+                </div>
+            </div>
+            <!-- *************************************************************** -->
+        </nav>
+        <div class="slider">
+            <div class="slider-content">
+                <h3 class="slider-content_tag">TRENDING</h3>
+                <h1 class="slider-content_name">Fishnet Chair</h1>
+                <p class="slider-content_details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                    available in matt powder-coated black </p>
+                <!-- Для разнообразия сделал кнопку в ввиде ссылки
+                 с тегом <a>. Дальше буду делать с тегом <button>.
+                 Класс для оформления что тега <a>, что тега
+                 <button> один и тотже .main_btn-->
+                <a class="main_btn">
+                    <span>Order Us </span>
+                </a>
+            </div>
+        </div>
+        <div class="slider-navigation-items">
+            <span class="navigation__item"></span>
+            <span class="navigation__item-active"></span>
+            <span class="navigation__item"></span>
+        </div>
+    </header>
+    <div class="featured">
+        <div class="tab-control">
+            <h4 class="tab-name inline-block">Featured</h4>
+            <h4 class="tab-name_active inline-block">New</h4>
+            <button class="tab-choice-btn inline-block">explore all</button>
+        </div>
+        <div class="tab-content">
+            <div class="content-product">
+                <img src="img/featured/product-1.png" alt="Фото товара">
+                <!-- Скрытый блок над карточкой товара, появляющийся
+                при наведении мыши -->
+                <div class="after">
+                    <figure>
+                        <div class="shape">
+                            <img src="img/arrow-btn.png" alt="">
+                        </div>
+                        <span>Fishnet Chair</span>
+                        <p>Seat and back with upholstery made of cold cure foam.</p>
+                    </figure>
+                </div>
+            </div>
+            <div class="content-product">
+                <img src="img/featured/product-2.png" alt="Фото товара">
+                <!-- Скрытый блок над карточкой товара, появляющийся
+                при наведении мыши -->
+                <div class="after">
+                    <figure>
+                        <div class="shape">
+                            <img src="img/arrow-btn.png" alt="">
+                        </div>
+                        <span>Fishnet Chair</span>
+                        <p>Seat and back with upholstery made of cold cure foam.</p>
+                    </figure>
+                </div>
+            </div>
+            <div class="content-product">
+                <img src="img/featured/product-3.png" alt="Фото товара">
+                <!-- Скрытый блок над карточкой товара, появляющийся
+                при наведении мыши -->
+                <div class="after">
+                    <figure>
+                        <div class="shape">
+                            <img src="img/arrow-btn.png" alt="">
+                        </div>
+                        <span>Fishnet Chair</span>
+                        <p>Seat and back with upholstery made of cold cure foam.</p>
+                    </figure>
+                </div>
+            </div>
+            <div class="content-product">
+                <img src="img/featured/product-4.jpg" alt="Фото товара">
+                <!-- Скрытый блок над карточкой товара, появляющийся
+                при наведении мыши -->
+                <div class="after">
+                    <figure>
+                        <div class="shape">
+                            <img src="img/arrow-btn.png" alt="">
+                        </div>
+                        <span>Fishnet Chair</span>
+                        <p>Seat and back with upholstery made of cold cure foam.</p>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="promo-product">
+        <div class="promo-content">
+            <img src="img/promo/promo-img1.png" alt="">
+            <div class="promo-info-block">
+                <h3 class="promo-tag">exclusive</h3>
+                <h2 class="promo-name">Fishnet Chair</h2>
+                <p class="promo-details">Seat and back with upholstery made of cold cure foam. Steel frame, available
+                    in matt.
+                </p>
+                <!-- Здесь сделал кнопку используя тег <button>, в стилях сначало очистил
+                   все стили кнопки по умолчанию, затем применил класс .main_btn -->
+                <button class="main_btn">Order Us</button>
+            </div>
+
+        </div>
+        <div class="promo-content">
+            <img src="img/promo/promo-img.png" alt="">
+            <div class="promo-info-block">
+                <h3 class="promo-tag">exclusive</h3>
+                <h2 class="promo-name">Fishnet Chair</h2>
+                <p class="promo-details">Seat and back with upholstery made of cold cure foam. Steel frame, available
+                    in matt.
+                </p>
+                <!-- Здесь сделал кнопку используя тег <button>, в стилях сначало очистил
+                   все стили кнопки по умолчанию, затем применил класс .main_btn -->
+                <button class="main_btn">Order Us</button>
+            </div>
+        </div>
+    </div>
+    <div class="trending-products">
+        <div class="tab-control">
+            <div class="tab-name tab-name__trending inline-block">Trending Products</div>
+            <button class="tab-choice-btn inline-block">explore all</button>
+        </div>
+        <div class="products-images">
+            <img src="img/trending/product-5.png" alt="">
+            <img src="img/trending/product-6.png" alt="">
+            <img src="img/trending/product-7.png" alt="">
+            <img src="img/trending/product-8.png" alt="">
+            <img src="img/trending/product-9.png" alt="">
+            <img src="img/trending/product-10.png" alt="">
+        </div>
+    </div>
+    <div class="hot-deals">
+        <div class="slider-content">
+            <h3 class="slider-content_tag">Hot deal</h3>
+            <h2 class="slider-content_name">Fishnet Chair</h2>
+            <p class="slider-content_details">Seat and back with upholstery made of cold cure foam. Steel frame,
+                available in matt powder-coated black.</p>
+            <a class="main_btn">
+                <!-- Для разнообразия сделал кнопку в ввиде ссылки
+                 с тегом <a>. Дальше буду делать с тегом <button>.
+                 Класс для оформления что тега <a>, что тега
+                 <button> один и тотже .main_btn-->
+                <span>Order Us </span>
+            </a>
+        </div>
+        <div class="slider-navigation-items">
+            <span class="navigation__item"></span>
+            <span class="navigation__item-active"></span>
+            <span class="navigation__item"></span>
+        </div>
+    </div>
+    <div class="exclusive-product">
+        <div class="exclusive-block__left">
+            <img src="img/exclusive/product-1-lg.png" alt="">
+            <div class="promo-info-block">
+                <div class="promo-tag">exclusive</div>
+                <div class="promo-name">Fishnet Chair</div>
+                <div class="promo-details">Seat and back with upholstery made of cold cure foam. Steel frame, available
+                    in matt.
+                </div>
+                <div class="main_btn">Order Us</div>
+            </div>
+        </div>
+        <div class="exclusive-block__right">
+            <img src="img/exclusive/product-2-sm.png" alt="">
+            <img src="img/exclusive/product-3-sm.png" alt="">
+            <img src="img/exclusive/product-4-sm.png" alt="">
+            <img src="img/exclusive/product-5-sm.png" alt="">
+        </div>
+    </div>
+    <div class="mobile-app">
+        <div class="slider-content">
+            <h3 class="slider-content_tag">mobile app</h3>
+            <h2 class="slider-content_name">Find. Follow. Favorite.</h2>
+            <p class="slider-content_details">Save your favorites and share your style.</p>
+            <a class=""><img src="img/google-play.png" alt=""></a>
+            <a class=""><img src="img/app-store.png" alt=""></a>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="sub_wrap">
+            <div class="sub-wrap_top">
+                <section class="contact">
+                    <h5>Contact Us</h5>
+                    <p>132A Bridge Road Richmond VIC Australia.</p>
+                    <p>Talk to us on 1300 132 info@interior.com</p>
+                </section>
+                <section class="useful-info">
+                    <h5>Useful Information</h5>
+                    <p class="useful_links">
+                        <span class="useful_link">
+                            <a href="#">Sales terms</a>
+                            <a href="#">Customer care</a>
+                            <a href="#">Delivery</a>
+                        </span>
+                        <span class="useful_link">
+                            <a href="#">Architect accounts</a>
+                            <a href="#"> Careers</a>
+                            <a href="#">Exchanges & returns</a>
+                        </span>
+                    </p>
+                </section>
+                <section class="form">
+                    <h5>Let’s Stay in Touch!</h5>
+                    <p>Suscribe to know about our latest news,
+                        products and special offers just for
+                        suscribers.</p>
+                    <form action="">
+                        <!-- ** РЕШЕНИЕ КАК ВСТАВИТЬ ИКОНКУ ИЗ AWESOME В ПОЛЕ <input> **
+                        Обернул в обертку и этой обертке дал позишен релатив, а
+                        уже внутри иконке позишен абсолют и дальше двигал -->
+                        <div class="input-wrap">
+                            <button type="submit" style="display: inline-block">
+                                <a href="#"><i class="far fa-paper-plane"></i></a>
+                            </button>
+                            <input type="email" placeholder="your email address">
+                        </div>
+
+                    </form>
+                </section>
+            </div>
+            <div class="sub-wrap_bottom">
+            <span class="copy-right">
+                © Copyright - INTERIOR 2016. All Rights Reserved.
+            </span>
+                <span class="social">
+                <a href=""><img src="img/social-links.png" alt="Ссылка на социальные сети"></a>
+
+            </span>
+                <span class="agreement">
+                <a href="">Terms & Conditions </a>/
+                <a href=""> Privacy policy & Cookies</a>
+            </span>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"></script>
+<!-- Скрипт для поиска в меню -->
+<script>
+    $(function () {
+        $('button').on('click', function () {
+            $('.my-block-search__input').toggleClass('__opened');
+        });
+    });
+</script>
+<!-- Подключения скрипта для вёрстки в pixel-perfect -->
+<script src="js/pixelScreen-home.js"></script>
+</body>
+</html>

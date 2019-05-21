@@ -1,0 +1,245 @@
+/*
+*****************************************
+******* Коментарии к файлу стилей *******
+  Решил сверстать эту страницу в bootstrap,
+поэтому пришлось переделывать стили в шапке
+и футере немного по другому.
+  Некоторые стили для шапки и футерадля
+product.html берутся из файла main.css.
+  Было бы проще скопировать из ДЗ-6, но
+сделал поновому, заодно разобрался с сеткой
+и стилями bootstrap-4.
+******************************************
+*/
+/* ПОДКЛЮЧЕНИЕ ШРИФТОВ */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,600,700&subset=cyrillic,cyrillic-ext');
+
+/*body*/
+/*{*/
+/*    font-family: Montserrat, sans-serif;  font-size: 12px;*/
+/*}*/
+
+@media only screen and (min-width : 1200px)
+{
+    .container
+    {
+        max-width: 1366x;
+    }
+}
+/* ******************************************
+*********************************************
+*
+* <header>
+* МОДУЛЬ-1__ШАПКА САЙТА С ГЛАВНЫМ МЕНЮ САЙТА *
+**
+** Главное меню */
+#header-product
+{
+    max-width: 1366px;
+    height: 360px;
+    padding-top: 29px;
+    padding-left: 0;
+    background-color: #f5f5f5;
+}
+#header-product .my-wrapper
+{
+    /*width: 1170px;*/
+}
+.navbar
+{
+    height: 40px;
+}
+
+.navbar-collapse
+{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 48px;
+    display: block;
+    height: 43px;
+    margin-left: 353px;
+    text-transform: uppercase;
+    color: #8c8c8c;
+}
+
+.nav-item
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;  margin-right: 12px;  border-bottom: 3px solid transparent;
+}
+
+.nav-item:last-child
+{
+    margin-right: 0;
+}
+
+.nav-item:hover
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;  color: #212121;  border-bottom: 3px solid #000;
+}
+
+.nav-link
+{
+    line-height: 30px;  padding: 0 1rem;
+}
+
+/* *********************
+**
+**Форма поиска по сайту*/
+.my-block-search__page-product
+{
+    margin-top: 0;  margin-left: 14px;
+}
+
+.my-block-search__page-product .my-block-search__btn
+{
+    margin-left: 0;
+}
+
+.my-block-search__page-product .my-block-search__btn
+{
+    margin-left: 0;
+}
+.my-header-nav {
+    padding-left: 97px;
+}
+
+.my-header-title
+{
+    /*max-width: 1366px;*/
+    margin-top: 152px;
+}
+h1
+{
+    font-size: 62px;  font-weight: 400;  line-height: 72px;  letter-spacing: -2.6px;  color: #212121;
+}
+/* ***********************************
+**************************************
+*
+* <main> *
+* МОДУЛЬ-2: ФОТОГАЛЕРЕЯ ВСЕХ ПРОДУКТОВ
+*/
+#main-product
+{
+    max-width: 1366px;
+}
+/* *************************
+**
+** Навигация по продуктам */
+.my-products__tab
+{
+    margin-top: 63px;  padding-left: 82px;
+}
+.my-products__tab a
+{ font-size: 18px;  font-weight: 700;  letter-spacing: 1.8px;
+ text-transform: uppercase; 
+
+    color: #6c6c6c; 
+}
+/* *********************************
+**
+** "Плитка" с картинками продуктов */
+.my-products__images
+{ max-width: 1170px;
+    margin-top: 50px; 
+}
+
+.my-products__images .my__images img:first-child,
+.my-products__images .my__images img:nth-child(3n+4)
+{
+    margin: 15px 15px 15px 0;
+}
+
+.my-products__images .my__images img:nth-child(2),
+.my-products__images .my__images img:nth-child(3n+5)
+{
+    margin: 15px 15px 15px 15px;
+}
+
+.my-products__images .my__images img:nth-child(3),
+.my-products__images .my__images img:nth-child(3n+6)
+{
+    margin: 15px 0 15px 15px;
+}
+/* ******************************************
+**
+** Иконка с "рефрешем" картинок проодуктов */
+#main-product .my_icon
+{
+    margin-top: 51px;
+}
+#main-product .fas:hover {
+    -webkit-transform: rotateZ(20deg);
+        -ms-transform: rotate(20deg);
+            transform: rotateZ(20deg);
+    cursor: pointer;
+    -webkit-box-shadow: 0 2px 5px 1px rgba(33, 33, 33, .35);
+            box-shadow: 0 2px 5px 1px rgba(33, 33, 33, .35);
+}
+#main-product .fas:active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+/* ***********************
+**************************
+*
+* МОДУЛЬ-3: ПРОМО-ПРОДУКТЫ
+*/
+.my-promo-products
+{
+    margin-top: 140px;
+}
+.my-promo-products .promo-content
+{
+    margin-top: 174px;  margin-left: 7px;
+}
+/* ***********************************
+**************************************
+*
+* <footer>
+* МОДУЛЬ-4:__ФУТЕР САЙТА, КОНТАКТЫ, ...
+*/
+#my-footer
+{
+    max-width: 1366px;
+}
+/* *******************************
+**
+** Контакты, полезная инфо, форма */
+#my-footer .sub-wrap_top
+{
+    width: 1170px;  padding-top: 111px;
+    margin-top: 120px;
+}
+#my-footer .contact
+{
+    padding-left: 98px;
+}
+#my-footer .useful-info
+{
+    padding-left: 59px;
+}
+#my-footer .useful-info__header
+{
+    padding-left: 27px;
+}
+/* *******************************
+**
+** Копирайт, соцсети, соглашения */
+#my-footer .sub-wrap_bottom
+{
+    margin-top: 56px;
+}
+#my-footer .copy-right
+{
+    padding-left: 99px;
+}
+.social
+{
+    padding-left: 161px;
+}
+#my-footer .agreement
+{
+    padding-left: 7px;
+}
